@@ -23,4 +23,4 @@ components/badgeteam__badgelink/
 badgelink
 eim_config.toml
 .BUILD_ROOT
-upstream-bug-report.txt
+upstream-bug-report.*

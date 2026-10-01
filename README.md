@@ -2,6 +2,8 @@
 
 A receive-only sub-GHz LoRa analyzer for the [Tanmatsu](https://docs.tanmatsu.cloud/). It uses the built-in LoRa radio (SX1262 for 868/915 MHz, SX1268 for 433 MHz) through the standard radio firmware, so no reflashing of the radio module is needed and Wi-Fi keeps working.
 
+![kikite's spectrum tab on a Tanmatsu, sweeping 902-928 MHz with a full waterfall](docs/spectrum.png)
+
 kikite never transmits. On exit it puts the radio's previous LoRa settings back, because other apps (MeshCore, for one) adopt whatever settings they find on the radio when they start.
 
 ## Tabs

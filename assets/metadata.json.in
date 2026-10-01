@@ -1,0 +1,13 @@
+{
+  "name": "kikite",
+  "description": "Sub-GHz LoRa spectrum analyzer and packet listener",
+  "categories": ["tools"],
+  "version": "@VERSION@",
+  "icon": {"16x16": "icon16.png", "32x32": "icon32.png", "64x64": "icon64.png"},
+  "author": "Daniel M. Drucker",
+  "license_type": "MIT",
+  "license_file": "LICENSE",
+  "application": [
+    {"targets": ["tanmatsu"], "type": "appfs", "executable": "kikite.bin", "revision": @REVISION@, "assets": []}
+  ]
+}

@@ -1,0 +1,24 @@
+name: Build
+run-name: Build
+on: [push]
+jobs:
+  HostTests:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sudo apt-get install -y libssl-dev
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - run: make test-host
+  Build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sudo apt-get install git wget flex bison gperf python3 python3-pip python3-venv cmake ninja-build ccache libffi-dev libssl-dev dfu-util libusb-1.0-0
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - run: make prepare
+      - run: make package APP_REVISION=${{ github.run_number }}
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: tanmatsu
+          path: build/dist/io.github.dmd.kikite/

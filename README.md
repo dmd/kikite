@@ -19,6 +19,11 @@ F1 restores the radio and returns to the launcher.
 
 **Spectrum:** `←/→` cursor (Shift for ×10), `↑/↓` reference level, `R` range, `B` bandwidth (62.5/125/250/500 kHz, which is also the step), `S` readings per step, `M` sweep method, `H` reset max-hold, `L` listen at the cursor frequency, Space pause.
 
+<p>
+<img src="docs/listen.png" width="49%" alt="Listen tab showing decoded MeshCore packets">
+<img src="docs/devices.png" width="49%" alt="Devices tab listing MeshCore repeaters heard">
+</p>
+
 **Listen:** `↑/↓` select a packet, Enter for decoded fields and a hex dump, Esc back, `P` next profile, `C` clear. On the custom profile, `F` spreading factor, `W` bandwidth, `Y` sync word (0x12 private/MeshCore, 0x34 LoRaWAN, 0x2B Meshtastic).
 
 **Radio:** `G` switches between the US 915 and EU 868 region (433 MHz modules are fixed).
